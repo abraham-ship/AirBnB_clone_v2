@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 # set up web server for deployment
 
-if ! [ -x "$(command -v nginx)" ]; then
-    sudo apt-get update
-    sudo apt-get -y install nginx
-fi
+sudo apt-get update
+sudo apt-get -y install nginx
 
 sudo mkdir -p /data/web_static/releases/test/
 sudo mkdir -p /data/web_static/shared/
