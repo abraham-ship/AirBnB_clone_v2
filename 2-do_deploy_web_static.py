@@ -21,7 +21,7 @@ def do_deploy(archive_path):
             format(archive_no_extension)
 
         # Upload the archive to the /tmp/ directory of the web server
-        put(archive_path, remote_tmp_archive)
+        put(archive_path, "/tmp")
 
         # Uncompress the archive to the /data/web_static/releases/ directory
         run("mkdir -p {}".format(remote_release_dir))
