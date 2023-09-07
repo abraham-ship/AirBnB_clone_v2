@@ -17,8 +17,8 @@ def do_deploy(archive_path):
         archive_filename = archive_path.split('/')[-1]
         archive_no_extension = archive_filename.split('.')[0]
         remote_tmp_archive = "/tmp/{}".format(archive_filename)
-        remote_release_dir = "/data/web_static/releases/{}/"
-        .format(archive_no_extension)
+        remote_release_dir = "/data/web_static/releases/{}/".\
+            format(archive_no_extension)
 
         # Upload the archive to the /tmp/ directory of the web server
         put(archive_path, remote_tmp_archive)
