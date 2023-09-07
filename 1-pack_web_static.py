@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+'''generate .tgz archive from web_static folder'''
 from fabric.api import local
 from datetime import datetime
 import os
@@ -22,7 +24,7 @@ def do_pack():
         print(result)
 
         if os.path.exists(archive_path):
-            print(f"web_static packed: {archive_path} ->
+            print(f"web_static packed: {archive_path} ->\
                   {os.path.getsize(archive_path)}Bytes")
             return archive_path
         else:
