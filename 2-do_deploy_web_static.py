@@ -2,7 +2,6 @@
 
 '''distribute an archive on web servers'''
 from fabric.api import env, put, run, local
-from os.path import exists
 from datetime import datetime
 import os
 
@@ -12,7 +11,7 @@ env.user = 'ubuntu'
 
 def do_deploy(archive_path):
     """Deploy the web_static archive to the web servers"""
-    if not exists(archive_path):
+    if not os.path.exists(archive_path):
         return False
 
     try:
