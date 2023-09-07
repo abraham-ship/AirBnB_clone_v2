@@ -7,6 +7,9 @@ from datetime import datetime
 import os
 
 
+env.hosts = ['35.174.211.53', '54.209.215.209']
+env.user = 'ubuntu'
+
 def do_deploy(archive_path):
     """Deploy the web_static archive to the web servers"""
     if not exists(archive_path):
