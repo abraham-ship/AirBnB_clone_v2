@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+'''
+a script that starts a Flask web application:
+    /states_list: display a HTML page: (inside the tag BODY)
+        H1 tag: “States”
+        UL tag: with the list of all State objects present in DBStorage sorted by name (A->Z)
+            LI tag: description of one State: <state.id>: <B><state.name></B>
+'''
 from flask import Flask, render_template
 from models import storage
 
